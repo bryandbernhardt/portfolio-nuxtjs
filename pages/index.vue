@@ -57,10 +57,12 @@ export default {
   & .presentation-card {
     max-width: 830px;
     padding: 2rem;
+    padding-bottom: 4rem;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+    overflow-x: auto;
 
     & .aboutme-wrapper {
       grid-column: span 3;
@@ -91,11 +93,12 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
+    z-index: 2;
     bottom: 0;
     width: 100%;
     padding: 0.5em;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     background-color: #eeeeee;
     color: #212121;
 
