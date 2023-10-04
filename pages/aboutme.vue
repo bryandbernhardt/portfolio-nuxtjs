@@ -9,7 +9,7 @@
       🎓 Aprendendo: Ciências de dados com IA e Android Nativo.<br>
       🧑‍🚀 Linguagens: JS, TS, Python, Java, Kotlin.<br>
       🚀 Frameworks: Vue, Quasar, Node.js, Android SDK.<br>
-      🛰️ Ferramentas: VSCode, Docker, Terminal, DBeaver, Android Studio.<br>
+      🛰️ Ferramentas: VSCode, Docker, Terminal, DBeaver, Android Studio, Xcode.<br>
       💻 SO: macOS (work), Windows 11 (personal).<br>
   </p>
   </div>
