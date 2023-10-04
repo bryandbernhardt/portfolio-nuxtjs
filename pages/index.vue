@@ -2,7 +2,7 @@
   <div class="initial-page">
     <div class="presentation-card">
       <div class="aboutme-wrapper">
-        <img src="https://avatars.githubusercontent.com/u/77077402?v=4" alt="Bryan Dietrich Bernhardt" width="150" />
+        <img class="profile-image" src="https://avatars.githubusercontent.com/u/77077402?v=4" alt="Bryan Dietrich Bernhardt" width="150" />
         <p class="main-message">Olá👋 Meu nome é Bryan Dietrich Bernhardt, sou desenvolvedor Full Stack e analista de sistemas. <br>Seja bem vindo ao meu portfólio!<br><br>Explore-o utilizando o menu a seguir...</p>
       </div>
       <div class="menu-wrapper">
@@ -49,6 +49,10 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  & .profile-image {
+    border-radius: 50%;
+  }
 
   & .presentation-card {
     max-width: 830px;
