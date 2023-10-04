@@ -14,7 +14,7 @@ import '~/assets/styles/reset.scss'
 <style>
 h1 {
   font-size: 2rem;
-  line-height: 1.5;
+  line-height: 1;
   margin-bottom: 1rem;
 }
 
