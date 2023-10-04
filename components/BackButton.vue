@@ -30,7 +30,6 @@ export default {
 }
 
 .back-button:hover {
-  border: 2px solid var(--clr);
   animation: box 3s infinite;
 }
 
@@ -39,7 +38,7 @@ export default {
     box-shadow: #27272c;
   }
   50% {
-    box-shadow: 0 0 25px var(--clr);
+    box-shadow: 0 0 20px var(--clr);
   }
   100% {
     box-shadow: #27272c;
