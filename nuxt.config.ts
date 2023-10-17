@@ -10,7 +10,13 @@ export default defineNuxtConfig({
         families: {
           'Roboto': true
         },
-        display: 'swap'
+        subsets: ['latin'],
+        display: 'swap',
+        prefetch: false,
+        preconnect: false,
+        preload: false,
+        download: true,
+        base64: false,
       }
     ]
   ],
@@ -19,5 +25,5 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
     }
-  }
+  },
 })
