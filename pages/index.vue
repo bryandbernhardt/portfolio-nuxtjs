@@ -2,7 +2,7 @@
   <div class="initial-page">
     <div class="presentation-card">
       <div class="aboutme-wrapper">
-        <img class="profile-image" src="https://avatars.githubusercontent.com/u/77077402?v=4" alt="Bryan Dietrich Bernhardt" width="150" />
+        <img class="profile-image" src="https://avatars.githubusercontent.com/u/77077402?v=4" alt="Bryan Dietrich Bernhardt" width="150" height="150" />
         <p class="main-message">Olá👋 Meu nome é Bryan Dietrich Bernhardt, sou desenvolvedor Full Stack e analista de sistemas. <br>Seja bem vindo ao meu portfólio!<br><br>Explore-o utilizando o menu a seguir...</p>
       </div>
       <div class="menu-wrapper">
@@ -12,13 +12,25 @@
       </div>
     </div>
     <div class="footer">
-      <a href="https://github.com/bryandbernhardt/" target="_blank">
+      <a
+        href="https://github.com/bryandbernhardt/"
+        aria-label="Bryan Dietrich Bernhardt's GitHub"
+        target="_blank"
+      >
         <Icon class="icon-button" size="2em" name="uil:github" :color="colorTheme" />
       </a>
-      <a href="https://www.linkedin.com/in/bryandbernhardt/" target="_blank">
+      <a
+        href="https://www.linkedin.com/in/bryandbernhardt/"
+        aria-label="Bryan Dietrich Bernhardt's LinkedIn"
+        target="_blank"
+      >
         <Icon class="icon-button" size="2em" name="uil:linkedin" :color="colorTheme" />
       </a>
-      <a href="https://www.instagram.com/baiaaam/" target="_blank">
+      <a
+        href="https://www.instagram.com/baiaaam/"
+        aria-label="Bryan Dietrich Bernhardt's Instagram"
+        target="_blank"
+      >
         <Icon class="icon-button" size="2em" name="uil:instagram" :color="colorTheme" />
       </a>
     </div>

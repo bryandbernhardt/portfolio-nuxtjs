@@ -1,3 +1,22 @@
+<script setup>
+import '~/assets/styles/reset.scss'
+
+useHead({
+  htmlAttrs: {
+    lang: 'en',
+  }
+})
+
+useSeoMeta({
+  title: 'Bryan Dietrich Bernhardt Developer',
+  ogTitle: 'Bryan Dietrich Bernhardt Developer',
+  description: 'Bryan Dietrich Bernhardt is a Full Stack developer/programmer studying Systemas Analysis and Development, he has great experience in Vue and NodeJS.',
+  ogDescription: 'Bryan Dietrich Bernhardt is a Full Stack developer/programmer studying Systemas Analysis and Development, he has great experience in Vue and NodeJS.',
+  ogImage: 'https://avatars.githubusercontent.com/u/77077402?v=4',
+  twitterCard: 'summary_large_image',
+})
+</script>
+
 <template>
   <div>
     <ColorScheme placeholder="..." tag="span">
@@ -6,10 +25,6 @@
     </ColorScheme>
   </div>
 </template>
-
-<script>
-import '~/assets/styles/reset.scss'
-</script>
 
 <style>
 h1 {
