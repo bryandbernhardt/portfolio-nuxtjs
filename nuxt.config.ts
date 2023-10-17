@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/color-mode',
+    '@nuxt/image',
     'nuxt-icon',
     [
       '@nuxtjs/google-fonts', {
