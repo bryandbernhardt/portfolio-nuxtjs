@@ -5,7 +5,6 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/fontaine',
     '@nuxt/image',
-    'nuxt-purgecss',
     'nuxt-icon',
     [
       '@nuxtjs/google-fonts', {
