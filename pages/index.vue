@@ -2,7 +2,7 @@
   <div class="initial-page">
     <div class="presentation-card">
       <div class="aboutme-wrapper">
-        <NuxtImg
+        <LazyNuxtImg
           preload
           class="profile-image"
           src="https://avatars.githubusercontent.com/u/77077402?v=4"
@@ -15,9 +15,9 @@
         <p class="main-message">Olá👋 Meu nome é Bryan Dietrich Bernhardt, sou desenvolvedor Full Stack e analista de sistemas. <br>Seja bem vindo ao meu portfólio!<br><br>Explore-o utilizando o menu a seguir...</p>
       </div>
       <div class="menu-wrapper">
-        <NuxtLink to="aboutme"><BaseButton label="Sobre Mim" /></NuxtLink>
-        <NuxtLink to="knowledges"><BaseButton label="Conhecimentos" /></NuxtLink>
-        <NuxtLink to="achievements"><BaseButton label="Conquistas"/></NuxtLink>
+        <LazyNuxtLink to="aboutme"><LazyBaseButton label="Sobre Mim" /></LazyNuxtLink>
+        <LazyNuxtLink to="knowledges"><LazyBaseButton label="Conhecimentos" /></LazyNuxtLink>
+        <LazyNuxtLink to="achievements"><LazyBaseButton label="Conquistas"/></LazyNuxtLink>
       </div>
     </div>
     <div class="footer">
@@ -26,34 +26,29 @@
         aria-label="Bryan Dietrich Bernhardt's GitHub"
         target="_blank"
       >
-        <Icon class="icon-button" size="2em" name="uil:github" :color="colorTheme" />
+        <LazyIcon class="icon-button" size="2em" name="uil:github" :color="colorTheme" />
       </a>
       <a
         href="https://www.linkedin.com/in/bryandbernhardt/"
         aria-label="Bryan Dietrich Bernhardt's LinkedIn"
         target="_blank"
       >
-        <Icon class="icon-button" size="2em" name="uil:linkedin" :color="colorTheme" />
+        <LazyIcon class="icon-button" size="2em" name="uil:linkedin" :color="colorTheme" />
       </a>
       <a
         href="https://www.instagram.com/baiaaam/"
         aria-label="Bryan Dietrich Bernhardt's Instagram"
         target="_blank"
       >
-        <Icon class="icon-button" size="2em" name="uil:instagram" :color="colorTheme" />
+        <LazyIcon class="icon-button" size="2em" name="uil:instagram" :color="colorTheme" />
       </a>
     </div>
   </div>
 </template>
 
 <script>
-import BaseButton from '~/components/BaseButton.vue'
 
 export default {
-  components: {
-    BaseButton
-  },
-
   computed: {
     colorTheme() {
       return this.$colorMode.value === 'dark' ? '#eeeeee' : '#424242';
