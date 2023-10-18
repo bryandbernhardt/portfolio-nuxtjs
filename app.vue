@@ -4,7 +4,24 @@ import '~/assets/styles/reset.scss'
 useHead({
   htmlAttrs: {
     lang: 'en',
-  }
+  },
+  link: [
+    {
+      rel: 'preload',
+      as: 'image',
+      href: 'https://avatars.githubusercontent.com/u/77077402?v=4'
+    },
+    {
+      rel: 'stylesheet',
+      as: 'style',
+      href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'
+    },
+    {
+      rel: 'stylesheet',
+      as: 'style',
+      href: 'assets/styles/reset.css'
+    }
+  ]
 })
 
 useSeoMeta({
