@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/color-mode',
+    '@nuxtjs/fontaine',
     '@nuxt/image',
     'nuxt-purgecss',
     'nuxt-icon',
