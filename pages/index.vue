@@ -2,7 +2,16 @@
   <div class="initial-page">
     <div class="presentation-card">
       <div class="aboutme-wrapper">
-        <NuxtImg preload class="profile-image" src="https://avatars.githubusercontent.com/u/77077402?v=4" alt="Bryan Dietrich Bernhardt" width="150" height="150" />
+        <NuxtImg
+          preload
+          class="profile-image"
+          src="https://avatars.githubusercontent.com/u/77077402?v=4"
+          alt="Bryan Dietrich Bernhardt"
+          width="150"
+          height="150"
+          loading="lazy"
+          preset="profileImage"
+        />
         <p class="main-message">Olá👋 Meu nome é Bryan Dietrich Bernhardt, sou desenvolvedor Full Stack e analista de sistemas. <br>Seja bem vindo ao meu portfólio!<br><br>Explore-o utilizando o menu a seguir...</p>
       </div>
       <div class="menu-wrapper">
