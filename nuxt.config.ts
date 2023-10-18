@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  css: ['~/assets/styles/reset.scss'],
   modules: [
     '@nuxtjs/color-mode',
     '@nuxtjs/fontaine',
