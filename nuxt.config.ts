@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/color-mode',
     '@nuxtjs/fontaine',
+    '@nuxtjs/critters',
     '@nuxt/image',
     'nuxt-icon',
     [
