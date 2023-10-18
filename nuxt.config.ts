@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxtjs/critters',
     '@nuxt/image',
     'nuxt-icon',
+    'nuxt-delay-hydration',
     [
       '@nuxtjs/google-fonts', {
         families: {
@@ -27,6 +28,11 @@ export default defineNuxtConfig({
       }
     ]
   ],
+  delayHydration: { 
+    mode: 'mount',
+    // enables nuxt-delay-hydration in dev mode for testing  
+    debug: process.env.NODE_ENV === 'development'
+  },
   app: {
     head: {
       charset: 'utf-8',
