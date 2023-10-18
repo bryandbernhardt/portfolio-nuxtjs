@@ -11,7 +11,9 @@ export default defineNuxtConfig({
     [
       '@nuxtjs/google-fonts', {
         families: {
-          'Roboto': [400]
+          'Roboto': {
+            wght: [400]
+          }
         },
         subsets: ['latin'],
         display: 'swap',
@@ -19,7 +21,9 @@ export default defineNuxtConfig({
         preconnect: false,
         preload: false,
         download: true,
-        base64: false,
+        base64: true,
+        overwriting: true,
+        inject: true,
       }
     ]
   ],
