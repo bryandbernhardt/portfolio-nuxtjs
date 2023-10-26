@@ -14,7 +14,7 @@ const localesFlags = {
 </script>
 
 <template>
-  <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
+  <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)" :aria-label="locale.name">
     <Icon size="2em" :name="localesFlags[locale.code]" />
   </NuxtLink>
 
