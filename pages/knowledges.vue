@@ -1,8 +1,12 @@
+<script setup>
+const localePath = useLocalePath()
+</script>
+
 <template>
-  <NuxtLink to="/"><BackButton /></NuxtLink>
+  <NuxtLink :to="localePath('/')"><BackButton /></NuxtLink>
   <div class="knowledges-container">
-    <h1>Base de Conhecimentos</h1>
-    <p>Em breve terá um blog com tópicos incríveis!</p>
+    <h1>{{ $t('knowledges.title') }}</h1>
+    <p>{{ $t('knowledges.coming_soon') }}</p>
   </div>
 </template>
 

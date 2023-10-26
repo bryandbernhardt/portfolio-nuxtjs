@@ -1,0 +1,43 @@
+{
+  "home": {
+    "hello": "Hola👋 Mi nombre es Bryan Dietrich Bernhardt, soy desarrollador Full Stack y analista de sistemas.",
+    "welcome": "¡Bienvenido a mi portafolio!",
+    "explore": "Explórelo utilizando el siguiente menú...",
+    "about_me": "Sobre mí",
+    "knowledges": "Conocimientos",
+    "achievements": "Realizaciones"
+  },
+  "about_me": {
+    "title": "Sobre mí",
+    "resume": "Bryan Dietrich Bernhardt es un entusiasta de la tecnología, inversor y desarrollador Full Stack",
+    "work": "Actualmente trabajando como desarrollador Full Stack usando el framework Vue junto con Quasar para entregar apps multiplataforma (Web/Android/iOS)",
+    "college": "Estudiante de Análisis y Desarrollo de Sistemas en la Universidad de Caxias do Sul",
+    "topics": {
+      "learning": "Aprendizaje: Ciencia de datos con IA y Android nativo",
+      "languages": "Lenguajes: Javascript, Typescript, Python, Java",
+      "frameworks": "Frameworks: Vue, Quasar, Node, Android SDK",
+      "tools": "Herramientas: VSCode, Docker, Terminal, DBeaver, Android Studio, Xcode",
+      "so": "OS: MacOS (Trabajo), Windows 11 (Personal)."
+    }
+  },
+  "achievements": {
+    "title": "Historia de realizaciones",
+    "coming_soon": "¡Pronto habrá una historia de mis principales logros!"
+  },
+  "knowledges": {
+    "title": "Base de conocimientos",
+    "coming_soon": "¡Pronto habrá un blog con temas increíbles!"
+  },
+  "theme_changer": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
+  "error": {
+    "message": "Vish, algo salió mal...",
+    "return": "Volver a la página de inicio"
+  },
+  "header": {
+    "title": "Bryan Dietrich Bernhardt - Desarrollador"
+  }
+}

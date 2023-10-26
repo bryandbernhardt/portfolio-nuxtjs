@@ -1,8 +1,12 @@
+<script setup>
+const localePath = useLocalePath()
+</script>
+
 <template>
-  <NuxtLink to="/"><BackButton /></NuxtLink>
+  <LazyNuxtLink :to="localePath('/')"><BackButton /></LazyNuxtLink>
   <div class="achievements-container">
-    <h1>Histórico de Conquistas</h1>
-    <p>Em breve terá um histórico com meus principais feitos!</p>
+    <h1>{{ $t('achievements.title') }}</h1>
+    <p>{{ $t('achievements.coming_soon') }}</p>
   </div>
 </template>
 

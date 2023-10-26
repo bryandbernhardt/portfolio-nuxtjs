@@ -12,36 +12,52 @@
           loading="lazy"
           preset="profileImage"
         />
-        <p class="main-message">Olá👋 Meu nome é Bryan Dietrich Bernhardt, sou desenvolvedor Full Stack e analista de sistemas. <br>Seja bem vindo ao meu portfólio!<br><br>Explore-o utilizando o menu a seguir...</p>
+        <p class="main-message">
+          {{ $t('home.hello')  }} <br/>
+          {{$t('home.welcome') }} <br/><br/>
+          {{ $t('home.explore') }}
+        </p>
       </div>
       <div class="menu-wrapper">
-        <LazyNuxtLink to="aboutme"><LazyBaseButton label="Sobre Mim" /></LazyNuxtLink>
-        <LazyNuxtLink to="knowledges"><LazyBaseButton label="Conhecimentos" /></LazyNuxtLink>
-        <LazyNuxtLink to="achievements"><LazyBaseButton label="Conquistas"/></LazyNuxtLink>
+        <LazyNuxtLink :to="localePath('about-me')">
+          <LazyBaseButton :label="$t('home.about_me')" />
+        </LazyNuxtLink>
+        <LazyNuxtLink :to="localePath('knowledges')">
+          <LazyBaseButton :label="$t('home.knowledges')" />
+        </LazyNuxtLink>
+        <LazyNuxtLink :to="localePath('achievements')">
+          <LazyBaseButton :label="$t('home.achievements')"/>
+        </LazyNuxtLink>
       </div>
     </div>
     <div class="footer">
-      <a
-        href="https://github.com/bryandbernhardt/"
-        aria-label="Bryan Dietrich Bernhardt's GitHub"
-        target="_blank"
-      >
-        <LazyIcon class="icon-button" size="2em" name="uil:github" :color="colorTheme" />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/bryandbernhardt/"
-        aria-label="Bryan Dietrich Bernhardt's LinkedIn"
-        target="_blank"
-      >
-        <LazyIcon class="icon-button" size="2em" name="uil:linkedin" :color="colorTheme" />
-      </a>
-      <a
-        href="https://www.instagram.com/baiaaam/"
-        aria-label="Bryan Dietrich Bernhardt's Instagram"
-        target="_blank"
-      >
-        <LazyIcon class="icon-button" size="2em" name="uil:instagram" :color="colorTheme" />
-      </a>
+      <div class="social-media">
+        <a
+          href="https://github.com/bryandbernhardt/"
+          aria-label="Bryan Dietrich Bernhardt's GitHub"
+          target="_blank"
+        >
+          <LazyIcon class="icon-button" size="2em" name="uil:github" :color="colorTheme" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/bryandbernhardt/"
+          aria-label="Bryan Dietrich Bernhardt's LinkedIn"
+          target="_blank"
+        >
+          <LazyIcon class="icon-button" size="2em" name="uil:linkedin" :color="colorTheme" />
+        </a>
+        <a
+          href="https://www.instagram.com/baiaaam/"
+          aria-label="Bryan Dietrich Bernhardt's Instagram"
+          target="_blank"
+        >
+          <LazyIcon class="icon-button" size="2em" name="uil:instagram" :color="colorTheme" />
+        </a>
+      </div>
+
+      <div class="language-changer">
+        <LanguageChanger />
+      </div>
     </div>
   </div>
 </template>
@@ -106,7 +122,9 @@ export default {
 
   & .footer {
     gap: 1rem;
-    display: flex;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -118,6 +136,8 @@ export default {
     background-color: #eeeeee;
     color: #212121;
 
+    grid-template-areas: 'none social-media language-changer';
+
     & .icon-button {
       transition: 0.2s;
       cursor: pointer;
@@ -125,6 +145,23 @@ export default {
       &:hover {
         filter: drop-shadow(0 0 10px #39FF14);
       }
+    }
+
+    & .social-media {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      grid-area: social-media;
+    }
+
+    & .language-changer {
+      margin-left: auto;
+      display: flex;
+      gap: 0.25rem;
+      justify-content: center;
+      align-items: center;
+      grid-area: language-changer;
     }
   }
 }

@@ -26,6 +26,33 @@ export default defineNuxtConfig({
         overwriting: true,
         inject: true,
       }
+    ],
+    [
+      '@nuxtjs/i18n',
+      {
+        vueI18n: './i18n/i18n.config.js',
+        detectBrowserLanguage: {
+          useCookie: true,
+          alwaysRedirect: true,
+        },
+        locales: [
+          {
+            code: 'en',
+            name: 'English',
+            iso: 'en'
+          },
+          {
+            code: 'es',
+            name: 'Español',
+            iso: 'es'
+          },
+          {
+            code: 'pt',
+            name: 'Português',
+            iso: 'pt-BR'
+          }
+        ]
+      }
     ]
   ],
   delayHydration: { 

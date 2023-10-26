@@ -1,15 +1,21 @@
 <script setup>
+const route = useRoute()
+const { t } = useI18n()
+const head = useLocaleHead({
+  addDirAttribute: true,
+  identifierAttribute: 'id',
+  addSeoAttributes: true
+})
+const title = computed(() => t('header.title'))
+
 useHead({
-  htmlAttrs: {
-    lang: 'en',
-  },
   link: [
     {
       rel: 'preload',
       as: 'image',
       href: 'https://avatars.githubusercontent.com/u/77077402?v=4'
     },
-  ]
+  ],
 })
 
 useSeoMeta({
@@ -23,12 +29,30 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
-    <ColorScheme placeholder="..." tag="span">
-      <ThemeChanger />
-      <NuxtPage />
-    </ColorScheme>
-  </div>
+  <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
+      <Head>
+        <Title>{{ title }}</Title>
+        <template v-for="link in head.link" :key="link.id">
+          <Link :id="link.id" :rel="link.rel" :href="link.href" :hreflang="link.hreflang" />
+        </template>
+        <template v-for="meta in head.meta" :key="meta.id">
+          <Meta :id="meta.id" :property="meta.property" :content="meta.content" />
+        </template>
+      </Head>
+      <Body>
+        <div>
+          <ColorScheme placeholder="..." tag="span">
+            <div class="floating-options">
+              <ThemeChanger />
+            </div>
+
+            <NuxtLayout>
+              <NuxtPage />
+            </NuxtLayout>
+          </ColorScheme>
+        </div>
+      </Body>
+    </Html>
 </template>
 
 <style>
@@ -49,5 +73,10 @@ body {
 .dark-mode body {
   background-color: #212121;
   color: #f5f5f5;
+}
+
+.floating-options {
+  position: absolute;
+  right: 0;
 }
 </style>
