@@ -60,7 +60,6 @@ export default defineNuxtConfig({
             file: 'pt-br.json'
           }
         ],
-        defaultLocale: 'en'
       }
     ]
   ],
