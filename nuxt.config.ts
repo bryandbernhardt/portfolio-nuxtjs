@@ -44,13 +44,13 @@ export default defineNuxtConfig({
           {
             code: 'en',
             name: 'English',
-            iso: 'en',
-            file: 'en-us.json'
+            iso: 'en-US',
+            file: 'en-us.json',
           },
           {
             code: 'es',
             name: 'Español',
-            iso: 'es',
+            iso: 'es-AR',
             file: 'es-ar.json'
           },
           {
