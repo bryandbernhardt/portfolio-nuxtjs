@@ -2,10 +2,11 @@
   "home": {
     "hello": "Olá👋 Meu nome é Bryan Dietrich Bernhardt, sou desenvolvedor Full Stack e analista de sistemas.",
     "welcome": "Seja bem vindo ao meu portfólio!",
-    "explore": "Explore-o utilizando o menu a seguir...",
+    "explore": "Explore-o utilizando o menu de navegação...",
     "about_me": "Sobre Mim",
     "knowledges": "Conhecimentos",
-    "achievements": "Conquistas"
+    "achievements": "Conquistas",
+    "home": "Início"
   },
   "about_me": {
     "title": "Sobre Mim",

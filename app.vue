@@ -1,6 +1,6 @@
 <script setup>
-const route = useRoute()
-const { t } = useI18n()
+const route = useRoute();
+const { t } = useI18n();
 const head = useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: 'id',
@@ -40,14 +40,12 @@ useSeoMeta({
         </template>
       </Head>
       <Body>
-        <div>
+        <div class="app-container">
           <ColorScheme placeholder="..." tag="span">
-            <div class="floating-options">
-              <ThemeChanger />
-            </div>
+            <DesktopMenu />
 
             <NuxtLayout>
-              <NuxtPage />
+              <NuxtPage class="page-container" />
             </NuxtLayout>
           </ColorScheme>
         </div>
@@ -55,28 +53,9 @@ useSeoMeta({
     </Html>
 </template>
 
-<style>
-h1 {
-  font-size: 2rem;
-  line-height: 1;
-  margin-bottom: 1rem;
-}
-
-p {
-  line-height: 1.5;
-}
-body {
-  background-color: #fff;
-  color: #212121;
-  font-family: 'Roboto', sans-serif;
-}
-.dark-mode body {
-  background-color: #212121;
-  color: #f5f5f5;
-}
-
-.floating-options {
-  position: absolute;
-  right: 0;
+<style lang="scss">
+.app-container {
+  display: flex;
+  flex-flow: column;
 }
 </style>

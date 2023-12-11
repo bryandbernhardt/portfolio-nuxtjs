@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ['~/assets/styles/reset.scss'],
+  css: ['~/assets/styles/reset.scss', '~/assets/styles/theme.scss'],
   modules: [
     '@nuxtjs/color-mode',
     '@nuxtjs/fontaine',
@@ -12,8 +12,8 @@ export default defineNuxtConfig({
     [
       '@nuxtjs/google-fonts', {
         families: {
-          'Roboto': {
-            wght: [400]
+          'Inter': {
+            wght: [400, 800]
           }
         },
         subsets: ['latin'],
@@ -85,5 +85,21 @@ export default defineNuxtConfig({
         }
       }
     }
+  },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "~/assets/styles/variables.scss";'
+        }
+      }
+    }
+  },
+  build: {
+    transpile: [
+      '@fortawesome/vue-fontawesome',
+      '@fortawesome/fontawesome-svg-core',
+      '@fortawesome/free-solid-svg-icons'
+    ]
   }
 })

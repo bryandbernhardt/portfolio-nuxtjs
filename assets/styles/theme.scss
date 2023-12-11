@@ -1,0 +1,19 @@
+html {
+  background-color: $color60;
+  color: $color30;
+	font-family: 'Inter', sans-serif;
+}
+.dark-mode html {
+  background-color: $color60;
+  color: $color30;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 800;
+	color: $color60;
+}
+
+p {
+	font-weight: 400;
+	color: $color30;
+}

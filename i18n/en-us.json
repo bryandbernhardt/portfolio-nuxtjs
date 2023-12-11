@@ -2,10 +2,11 @@
   "home": {
     "hello": "Hello👋 My name is Bryan Dietrich Bernhardt, I'm a Full Stack developer and systems analyst.",
     "welcome": "Welcome to my portfolio!",
-    "explore": "Explore it using the following menu...",
+    "explore": "Explore it using the navigation menu...",
     "about_me": "About Me",
     "knowledges": "Knowledges",
-    "achievements": "Achievements"
+    "achievements": "Achievements",
+    "home": "Home"
   },
   "about_me": {
     "title": "About Me",
