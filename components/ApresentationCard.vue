@@ -59,13 +59,10 @@
     justify-content: flex-end;
     gap: 1.3rem;
     color: $color10;
+    filter: drop-shadow(0px 0px 3px #ADAC9A);
 
     .icon {
-      background-color: $color60;
-      border-radius: 0.25rem;
-      border: 0.2rem solid $color60;
       width: 1.75rem;
-      fill: $color10;
     }
   }
 }
