@@ -13,7 +13,7 @@ export default defineNuxtConfig({
       '@nuxtjs/google-fonts', {
         families: {
           'Inter': {
-            wght: [400, 800]
+            wght: [400, 700]
           }
         },
         subsets: ['latin'],
