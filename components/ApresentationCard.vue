@@ -66,4 +66,18 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .apresentation-card {
+    .apresentation-wrapper {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .apresentation-links {
+      justify-content: center;
+    }
+  }
+}
 </style>

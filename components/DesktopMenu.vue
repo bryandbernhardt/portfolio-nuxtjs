@@ -28,6 +28,7 @@
   gap: 3.8rem;
   padding: 2.5rem;
   box-shadow: 0.06rem 0.06rem 0.6rem 0.3rem #0000000d;
+  flex-wrap: wrap;
 
   .desktop-menu__item {
     color: $color10;

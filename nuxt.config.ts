@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-icon',
     'nuxt-delay-hydration',
+    '@nuxtjs/device',
     [
       '@nuxtjs/google-fonts', {
         families: {

@@ -42,7 +42,8 @@ useSeoMeta({
       <Body>
         <div class="app-container">
           <ColorScheme placeholder="..." tag="span">
-            <DesktopMenu />
+            <DesktopMenu v-if="$device.isDesktop" />
+            <MobileMenu v-else />
 
             <NuxtLayout>
               <NuxtPage class="page-container" />
