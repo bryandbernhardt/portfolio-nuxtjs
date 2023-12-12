@@ -23,7 +23,19 @@
   },
   "achievements": {
     "title": "Historia de realizaciones",
-    "coming_soon": "¡Pronto habrá una historia de mis principales logros!"
+    "coming_soon": "¡Pronto habrá una historia de mis principales logros!",
+    "items": {
+      "1": {
+        "title": "actualiza su sitio web con un nuevo diseño",
+        "date": "11 de diciembre, 2023",
+        "description": "Tardamos 3 horas en formular el diseño en Figma y 8 horas en actualizar el proyecto al nuevo diseño!"
+      },
+      "2": {
+        "title": "desarrolló la aplicación t2c",
+        "date": "28 de noviembre, 2023",
+        "description": "Aplicación móvil para fines de estudio en Desarrollo Móvil y Ciencia de Datos, desarrollada usando Supabase, Nuxt3, Ionic/Capacitor para registrar datos y obtener insights de clientes y ventas con tablas y gráficos."
+      }
+    }
   },
   "knowledges": {
     "title": "Base de conocimientos",
