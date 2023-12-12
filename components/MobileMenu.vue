@@ -36,8 +36,8 @@
     align-items: center;
 
     .icon {
-      width: 2rem;
-      padding: 0.5rem;
+      height: 4rem;
+      padding: 1rem;
     }
 
     &:hover {

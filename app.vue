@@ -60,7 +60,7 @@ useSeoMeta({
   flex-flow: column;
 
   .mobile-spacing {
-    margin-bottom: 2.5rem;
+    margin-bottom: 4rem;
   }
 }
 </style>
