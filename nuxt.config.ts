@@ -76,6 +76,17 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
     }
   },
+  image: {
+    presets: {
+      profileImage: {
+        modifiers: {
+          format: 'webp',
+          width: 150,
+          height: 150
+        }
+      }
+    }
+  },
   vite: {
     css: {
       preprocessorOptions: {
