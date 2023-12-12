@@ -1,12 +1,24 @@
 <template>
   <div class="mobile-menu">
-    <nuxt-link class="mobile-menu-item" :to="localePath('knowledges')">
+    <nuxt-link
+      class="mobile-menu-item"
+      :to="localePath('knowledges')"
+      :aria-label="$t('knowledges.title')"
+    >
       <font-awesome-icon :icon="['fa-solid', 'fa-book']" class="icon" />
     </nuxt-link>
-    <nuxt-link class="mobile-menu-item" :to="localePath('index')">
+    <nuxt-link
+      class="mobile-menu-item"
+      :to="localePath('index')"
+      :aria-label="$t('home.home')"
+    >
       <font-awesome-icon :icon="['fa-solid', 'fa-home']" class="icon" />
     </nuxt-link>
-    <nuxt-link class="mobile-menu-item" :to="localePath('achievements')">
+    <nuxt-link
+      class="mobile-menu-item"
+      :to="localePath('achievements')"
+      :aria-label="$t('achievements.title')"
+    >
       <font-awesome-icon class="icon" :icon="['fa-solid', 'fa-clock-rotate-left']" />
     </nuxt-link>
   </div>

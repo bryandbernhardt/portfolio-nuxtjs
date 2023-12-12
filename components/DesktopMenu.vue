@@ -1,19 +1,31 @@
 <template>
   <div class="desktop-menu">
     <div class="desktop-menu__item">
-      <nuxt-link :to="localePath('index')" class="link">
+      <nuxt-link
+        :to="localePath('index')"
+        class="link"
+        :aria-label="$t('home.home')"
+      >
         <font-awesome-icon :icon="['fa-solid', 'fa-home']" class="icon" />
         <span>{{ $t('home.home') }}</span>
       </nuxt-link>
     </div>
     <div class="desktop-menu__item">
-      <nuxt-link :to="localePath('knowledges')" class="link">
+      <nuxt-link
+        :to="localePath('knowledges')"
+        class="link"
+        :aria-label="$t('knowledges.title')"
+      >
         <font-awesome-icon :icon="['fa-solid', 'fa-book']" class="icon" />
         <span>{{ $t('home.knowledges') }}</span>
       </nuxt-link>
     </div>
     <div class="desktop-menu__item">
-      <nuxt-link :to="localePath('achievements')" class="link">
+      <nuxt-link
+        :to="localePath('achievements')"
+        class="link"
+        :aria-label="$t('achievements.title')"
+      >
         <font-awesome-icon :icon="['fa-solid', 'fa-clock-rotate-left']" class="icon" />
         <span>{{ $t('home.achievements') }}</span>
       </nuxt-link>
