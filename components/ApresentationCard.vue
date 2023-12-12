@@ -20,13 +20,13 @@
       </p>
     </div>
     <div class="apresentation-links">
-      <a href="https://www.instagram.com/baiaaam/" target="_blank">
+      <a href="https://www.instagram.com/baiaaam/" target="_blank" aria-label="Instagram">
         <font-awesome-icon :icon="['fa-brands', 'fa-square-instagram']" class="icon" />
       </a>
-      <a href="https://www.linkedin.com/in/bryandbernhardt/" target="_blank">
+      <a href="https://www.linkedin.com/in/bryandbernhardt/" target="_blank" aria-label="LinkedIn">
         <font-awesome-icon :icon="['fa-brands', 'fa-linkedin']" class="icon" />
       </a>
-      <a href="https://github.com/bryandbernhardt/" target="_blank">
+      <a href="https://github.com/bryandbernhardt/" target="_blank" aria-label="GitHub">
         <font-awesome-icon :icon="['fa-brands', 'fa-square-github']" class="icon" />
       </a>
     </div>
