@@ -46,7 +46,7 @@ useSeoMeta({
             <MobileMenu v-else />
 
             <NuxtLayout>
-              <NuxtPage class="page-container" />
+              <NuxtPage class="page-container" :class="{ 'mobile-spacing': !$device.isDesktop }" />
             </NuxtLayout>
           </ColorScheme>
         </div>
@@ -58,5 +58,9 @@ useSeoMeta({
 .app-container {
   display: flex;
   flex-flow: column;
+
+  .mobile-spacing {
+    margin-bottom: 2.5rem;
+  }
 }
 </style>

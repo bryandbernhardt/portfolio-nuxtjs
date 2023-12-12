@@ -14,6 +14,7 @@
 
 <style lang="scss">
 .mobile-menu {
+  z-index: 1;
   color: $color10;
   background-color: $color60;
   display: grid;
@@ -25,6 +26,7 @@
   left: 0;
   width: 100%;
   align-items: center;
+  box-shadow: 0.6rem 0.06rem 0.6rem 0.3rem #0000000d;
 
   .mobile-menu-item {
     display: flex;
