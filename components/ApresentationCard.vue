@@ -3,11 +3,13 @@
     <div class="apresentation-wrapper">
       <nuxt-img
         preload
+        format="webp"
         class="profile-image"
         src="https://avatars.githubusercontent.com/u/77077402?v=4"
         alt="Bryan Dietrich Bernhardt"
         width="150"
         height="150"
+        sizes="150px"
         loading="lazy"
         preset="profileImage"
       />
