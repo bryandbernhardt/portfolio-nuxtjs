@@ -52,7 +52,7 @@
     }
 
     .apresentation-text {
-      color: $color60;
+      color: $clearText;
     }
   }
 
