@@ -14,7 +14,7 @@
       <nuxt-link
         :to="localePath('knowledges')"
         class="link"
-        :aria-label="$t('knowledges.title')"
+        :aria-label="$t('home.knowledges')"
       >
         <font-awesome-icon :icon="['fa-solid', 'fa-book']" class="icon" />
         <span>{{ $t('home.knowledges') }}</span>
@@ -24,7 +24,7 @@
       <nuxt-link
         :to="localePath('achievements')"
         class="link"
-        :aria-label="$t('achievements.title')"
+        :aria-label="$t('home.achievements')"
       >
         <font-awesome-icon :icon="['fa-solid', 'fa-clock-rotate-left']" class="icon" />
         <span>{{ $t('home.achievements') }}</span>
@@ -43,7 +43,7 @@
   flex-wrap: wrap;
 
   .desktop-menu__item {
-    color: $color10;
+    color: $darkText;
     font-weight: 800;
   }
 
@@ -60,7 +60,7 @@
     }
 
     .link:hover {
-      filter: brightness(1.2);
+      color: $color10;
     }
   }
 }
