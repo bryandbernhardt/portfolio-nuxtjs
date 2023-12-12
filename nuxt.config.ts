@@ -17,14 +17,11 @@ export default defineNuxtConfig({
             wght: [400, 700]
           }
         },
-        subsets: ['latin'],
+        subsets: 'latin',
         display: 'swap',
-        prefetch: false,
-        preconnect: false,
-        preload: false,
-        download: true,
-        base64: true,
-        overwriting: true,
+        prefetch: true,
+        preconnect: true,
+        preload: true,
         inject: true,
       }
     ],
