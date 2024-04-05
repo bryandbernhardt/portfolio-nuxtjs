@@ -38,7 +38,7 @@
   left: 0;
   width: 100%;
   align-items: center;
-  box-shadow: 0.6rem 0.06rem 0.6rem 0.3rem #0000000d;
+  box-shadow: 0rem 0rem 9rem 3rem #ffffff0d;
 
   .mobile-menu-item {
     display: flex;

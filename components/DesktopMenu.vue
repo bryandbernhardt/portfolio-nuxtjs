@@ -39,7 +39,7 @@
   justify-content: center;
   gap: 3.8rem;
   padding: 2.5rem;
-  box-shadow: 0rem 0rem 9rem 3rem #ffffff0d;;
+  box-shadow: 0rem 0rem 9rem 3rem #ffffff0d;
   flex-wrap: wrap;
 
   .desktop-menu__item {
