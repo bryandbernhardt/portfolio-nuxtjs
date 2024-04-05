@@ -61,7 +61,7 @@
     justify-content: flex-end;
     gap: 1.3rem;
     color: $color10;
-    filter: drop-shadow(0px 0px 3px #ADAC9A);
+    filter: drop-shadow(0.1rem 0.1rem 0.1rem #0000002b);
 
     .icon {
       width: 1.75rem;
