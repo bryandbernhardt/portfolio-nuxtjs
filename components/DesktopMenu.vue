@@ -39,11 +39,11 @@
   justify-content: center;
   gap: 3.8rem;
   padding: 2.5rem;
-  box-shadow: 0.06rem 0.06rem 0.6rem 0.3rem #0000000d;
+  box-shadow: 0rem 0rem 9rem 3rem #ffffff0d;;
   flex-wrap: wrap;
 
   .desktop-menu__item {
-    color: $darkText;
+    color: $secoundaryText;
     font-weight: 800;
   }
 
