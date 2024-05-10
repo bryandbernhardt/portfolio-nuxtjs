@@ -1,50 +1,30 @@
 {
   "home": {
-    "hello": "Olá👋 Meu nome é Bryan Dietrich Bernhardt, sou desenvolvedor Full Stack e analista de sistemas.",
-    "welcome": "Seja bem vindo ao meu portfólio!",
-    "explore": "Explore-o utilizando o menu de navegação...",
-    "about_me": "Sobre Mim",
-    "knowledges": "Conhecimentos",
-    "achievements": "Conquistas",
-    "home": "Início"
-  },
-  "about_me": {
-    "title": "Sobre Mim",
-    "resume": "Bryan Dietrich Bernhardt é entusiasta de tecnologia, investidor e programador Full Stack.",
-    "work": "Trabalhando no momento como desenvolvedor Full Stack utilizando o framework Vue juntamente com o Quasar para entrega de apps multiplataforma (Web/Android/iOS).",
-    "college": "Estudante de Analise e Desenvolvimento de Sistemas na Universidade de Caxias do Sul.",
-    "topics": {
-      "learning": "Aprendendo: Ciências de dados com IA e Android Nativo.",
-      "languages": "Linguagens: Javascript, Typescript, Python, Java.",
-      "frameworks": "Frameworks: Vue, Quasar, Node, Android SDK",
-      "tools": "Ferramentas: VSCode, Docker, Terminal, DBeaver, Android Studio, Xcode.",
-      "so": "SO: MacOS (Trabalho), Windows 11 (Pessoal)."
-    }
-  },
-  "achievements": {
-    "title": "Histórico de Conquistas",
-    "coming_soon": "Em breve terá um histórico com meus principais feitos!",
-    "items": {
-      "1": {
-        "title": "atualizou o seu website com um novo design",
-        "date": "Dez 11, 2023",
-        "description": "Design formulado no Figma com um design limpo e moderno que se adaptasse de acordo com o dispositivo do usuário para melhor experiência de navegação e psicologia de cores que remetem tecnologia e seriedade."
-      },
-      "2": {
-        "title": "desenvolveu o aplicativo t2c",
-        "date": "Nov 28, 2023",
-        "description": "Aplicativo mobile para fins de estudo nas cadeiras de Desenvolvimento Mobile e Ciência de Dados, desenvolvido utilizando Supabase, Nuxt3, Ionic/Capacitor para o cadastro de dados e obtenção de insights sobre os clientes e vendas com tabelas e gráficos."
+    "overview": {
+      "title": "Visão geral",
+      "content": {
+        "1": "Olá\uD83D\uDC4B Meu nome é Bryan Dietrich Bernhardt, sou um entusiasta da tecnologia, investidor e desenvolvedor Full Stack.",
+        "2": "Faculdade em Análise e Desenvolvimento de Sistemas em andamento 8/10",
+        "3": "Técnico em eletrônica desde 2018"
+      }
+    },
+
+    "history": {
+      "title": "História",
+      "content": {
+        "1": "Vamos começar desde o início, pois foram fatores muito antes de uma vida profissional e acadêmica que fizeram eu me tornar um programador.",
+        "2": "Até meus 10 anos de idade eu utilizava um notebook com baixíssimo poder computacional que tenho funcionando até hoje... Grande guerreiro, ele foi meu primeiro contato direto com um computador, contato direto que eu digo significa que eu mesmo utilizei e naveguei pelo sistema, não estava vendo alguém o fazer. Nessa época era tudo muito difícil, eu lembro que não rodava quase nada e não tínhamos internet em casa, eu conectava na do meu dindo que era nosso vizinho mas o sinal era bem fraco e lento. Mesmo assim era o suficiente para usufruir um pouco da internet e conseguir jogar alguns jogos de navegador, eu também tinha um console na época mas o fato dos computadores possuírem internet era algo mágico que me atraía.",
+        "3": "Ali pelos meus 10 anos foi quando tudo mudou, pois ganhei meu primeiro computador de mesa, ele era em um nível médio de escritório mas já suportava tudo que eu gostaria e conhecia na época, funcionava todos os jogos que eu não conseguia jogar no anterior e nós havíamos instalado a internet em casa, nessa época que realmente comecei a criar mais \"intimidade\" com o computador e aprender a gerenciar programas, sistema, armazenamento e juntamente com os jogos acabou surgindo a necessidade de aprender sobre servidores para criar os hosts locais de jogos e conectar com amigos através de VPNs e com o tempo fui ficando cada vez mais avançado. Digamos que eu também tenha esse computador até hoje, mas todas as peças já foram trocadas por conta dos upgrades que fiz com o tempo, esse é meu companheiro de caminhada responsável por grande parte do meu conhecimento de computação. Nessa época, com o apoio dos meus pais, realizei um curso de Suporte de TI aprendendo sobre: manutenção de software e hardware de computadores, Linux, instalação de sistemas operacionais, dentre outros.",
+        "4": "A próxima data importante nessa história foi quando eu completava 15 anos, nessa época recém estava entrando no ensino médio e queria resolver o que eu faria da minha vida profissional, pois iria para um ensino médio com técnico integrado, nesse momento eu só falava de programação, pois sabia que tudo o que eu configurava e usava no computador era originado dela, nessa época fui para o curso técnico de eletrônica, nele aprendi mais a fundo sobre como funciona cada componente eletrônico e a parte de baixo nível da programação, projetando circuitos lógicos eletrônicos com microcontroladores programados em C, também tivemos algumas práticas de CLPs e Arduinos que também são chips programáveis. Após me formar no técnico eu comecei estudar sobre o desenvolvimento web, visando programar aplicativos para a internet pois já sabia como funcionava boa parte de hardware e agora queria experimentar esse outro mundo das telas coloridas e com designs mais próximos do nível de usuário. Também já estava trabalhando como técnico de suporte e implantação de sistemas que iniciei como estagiário de eletrônica e depois fui efetivado.",
+        "5": "Nesses estudos e aprendizados no trabalho comecei pela base do HTML, CSS e JavaScript, logo após já me familiarizei com o TypeScript e alguns frameworks como .NET Core, Angular, React e Node, nessa época também iniciei a faculdade de Análise e Desenvolvimento de Sistemas que também me aprofundou em outras áreas como desenvolvimento Android nativo, inteligência artificial, análise de dados com R e Python, dentre outras tecnologias, a faculdade foi um ponto crucial responsável por demonstrar algumas tecnologias de cada área com aulas práticas responsáveis por apresentar como funciona o desenvolvimento de sistemas em diferentes dispositivos e para diferentes aplicações.",
+        "6": "Após um período tive problemas de saúde e precisei dar uma pausa na parte profissional mas continuei na acadêmica, depois retornei ao mercado de trabalho como desenvolvedor Web Full Stack, por conta do trabalho meu principal framework tornou-se Vue.js com Capacitor para o desenvolvimento de aplicações web/mobile (Android/iOS) e Node.js para desenvolvimento de APIs REST e também com GraphQL, sem contar as demais bibliotecas, testes, bancos de dados SQL e noSQL, pipelines, CI/CD, sistemas/ambientes cloud como Azure, Firebase e APIs de terceiros utilizados para desenvolvimento no dia-a-dia."
       }
     }
   },
-  "knowledges": {
-    "title": "Base de Conhecimentos",
-    "coming_soon": "Em breve terá um blog com tópicos incríveis!"
-  },
   "theme_changer": {
-    "light": "Claro",
-    "dark": "Escuro",
-    "system": "Sistema"
+    "light": "☀\uFE0F Claro",
+    "dark": "\uD83C\uDF19 Escuro",
+    "system": "☁\uFE0F Sistema"
   },
   "error": {
     "message": "Vish, algo deu errado...",
@@ -54,5 +34,11 @@
   },
   "header": {
     "title": "Bryan Dietrich Bernhardt - Desenvolvedor"
+  },
+  "settings": {
+    "title": "Configurações",
+    "subtitles": {
+      "languages": "Idiomas"
+    }
   }
 }

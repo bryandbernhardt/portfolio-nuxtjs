@@ -14,8 +14,19 @@ const localesFlags = {
 </script>
 
 <template>
-  <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)" :aria-label="locale.name">
-    <Icon size="2em" :name="localesFlags[locale.code]" />
-  </NuxtLink>
+  <div class="language-changer">
+    <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)" :aria-label="locale.name">
+      <UTooltip :text="locale.name" :popper="{ arrow: true }">
+        <Icon size="2em" :name="localesFlags[locale.code]" />
+      </UTooltip>
+    </NuxtLink>
+  </div>
 
 </template>
+
+<style lang="scss">
+.language-changer {
+  display: flex;
+  gap: 0.2rem;
+}
+</style>
