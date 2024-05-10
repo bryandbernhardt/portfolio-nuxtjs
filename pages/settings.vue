@@ -4,7 +4,7 @@ const localePath = useLocalePath();
 
 const links = computed(() => [
   {
-    label: $i18n.t('home.overview.title'),
+    label: '',
     icon: 'i-heroicons-home-solid',
     to: localePath('index')
   },
@@ -35,6 +35,7 @@ body {
       top: 0;
       left: 0;
       padding: 1rem;
+      max-width: calc(100vw - 8.5rem);
     }
   }
 }
