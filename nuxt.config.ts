@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/styles/reset.scss', '~/assets/styles/theme.scss'],
   modules: [
+    '@nuxt/ui',
     '@nuxtjs/color-mode',
     '@nuxtjs/fontaine',
     '@nuxtjs/critters',
@@ -62,6 +63,9 @@ export default defineNuxtConfig({
       }
     ]
   ],
+  ui: {
+    global: true,
+  },
   delayHydration: { 
     mode: 'init',
     // enables nuxt-delay-hydration in dev mode for testing  
