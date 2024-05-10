@@ -4,13 +4,12 @@ const route = useRoute();
 
 <template>
   <div class="main" >
-    <ThemeChanger class="theme-changer" />
+    <SettingsButton class="settings-button" v-if="route.matched.some(({ path }) => !path.endsWith('/settings'))" />
     <div class="page">
       <UContainer>
         <slot />
       </UContainer>
     </div>
-    <SettingsButton class="settings-button" v-if="route.matched.some(({ path }) => !path.endsWith('/settings'))" />
   </div>
 </template>
 
@@ -24,16 +23,9 @@ const route = useRoute();
   }
 }
 
-.theme-changer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 1rem;
-}
-
 .settings-button {
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 0;
 }
 </style>
