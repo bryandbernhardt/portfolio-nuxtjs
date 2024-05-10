@@ -34,7 +34,9 @@
   },
   "settings": {
     "title": "Configuraciones",
+    "change_language": "pulse para cambiar...",
     "subtitles": {
+      "theme": "Tema",
       "languages": "Idiomas"
     }
   }

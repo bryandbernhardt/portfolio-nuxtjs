@@ -36,7 +36,9 @@
   },
   "settings": {
     "title": "Settings",
+    "change_language": "click to change...",
     "subtitles": {
+      "theme": "Theme",
       "languages": "Languages"
     }
   }
