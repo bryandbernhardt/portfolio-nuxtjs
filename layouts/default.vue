@@ -10,7 +10,7 @@ const route = useRoute();
         <slot />
       </UContainer>
     </div>
-    <SettingsButton class="settings-button" v-if="route.matched.some(({ path }) => !path.startsWith('/settings'))" />
+    <SettingsButton class="settings-button" v-if="route.matched.some(({ path }) => !path.endsWith('/settings'))" />
   </div>
 </template>
 
