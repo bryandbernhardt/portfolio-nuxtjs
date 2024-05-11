@@ -23,7 +23,7 @@
   "theme_changer": {
     "light": "☀\uFE0F Light",
     "dark": "\uD83C\uDF19 Dark",
-    "system": " ☁\uFE0F System"
+    "system": " ☁\uFE0F System default"
   },
   "error": {
     "message": "Oops! Something went wrong...",
