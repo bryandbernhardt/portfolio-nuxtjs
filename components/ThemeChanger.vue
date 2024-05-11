@@ -1,5 +1,6 @@
 <script setup>
 const { $i18n } = useNuxtApp();
+const colorMode = useColorMode()
 
 const options = computed(() => {
   return [
@@ -18,10 +19,25 @@ const options = computed(() => {
   ]
 });
 
+const formattedOptions = computed(() => options.value.map(
+  (option) => [
+    {
+      label: option.name,
+      click: () => colorMode.preference = option.value,
+    }
+  ]
+));
+
 </script>
 
 <template>
-  <span>
-    <USelect v-model="$colorMode.preference" :options="options" option-attribute="name" />
-  </span>
+    <UDropdown :items="formattedOptions" :popper="{ placement: 'bottom-start' }" >
+      <UButton color="white" :label="options.find((option) => option.value === $colorMode.preference).name" trailing-icon="i-heroicons-chevron-down-20-solid" block />
+    </UDropdown>
 </template>
+
+<style scoped lang="scss">
+button {
+  justify-content: space-between;
+}
+</style>

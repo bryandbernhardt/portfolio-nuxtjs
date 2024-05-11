@@ -24,7 +24,7 @@
   "theme_changer": {
     "light": "☀\uFE0F Claro",
     "dark": "\uD83C\uDF19 Escuro",
-    "system": "☁\uFE0F Sistema"
+    "system": "☁\uFE0F Padrão do sistema"
   },
   "error": {
     "message": "Vish, algo deu errado...",

@@ -55,7 +55,7 @@ const links = computed(() => [
 
     <div class="setting-content">
       <h2>{{ $t('settings.subtitles.languages') }}</h2>
-      <UButton :label="activeLocale.name + ', ' + $t('settings.change_language')" @click="isOpen = true" color="white" style="width: 100%" />
+      <UButton :label="activeLocale.name + ', ' + $t('settings.change_language')" @click="isOpen = true" color="white" />
       <USlideover v-model="isOpen">
         <UCard class="flex flex-col flex-1" :ui="{ body: { base: 'flex-1' }, ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
           <template #header>
@@ -94,6 +94,10 @@ body {
 
     .setting-content {
       margin-bottom: 1rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
     }
   }
 }
