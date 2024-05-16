@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: false,
   devtools: { enabled: true },
   routeRules: {
     '/': { prerender: true }, //SSG for static pages
@@ -77,6 +78,13 @@ export default defineNuxtConfig({
   ui: {
     global: true,
   },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'],
+      ignore: ["/api"]
+    }
+  },
   delayHydration: { 
     mode: 'init',
     // enables nuxt-delay-hydration in dev mode for testing  
@@ -86,17 +94,6 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-    }
-  },
-  image: {
-    presets: {
-      profileImage: {
-        modifiers: {
-          format: 'webp',
-          width: 150,
-          height: 150
-        }
-      }
     }
   },
   vite: {
