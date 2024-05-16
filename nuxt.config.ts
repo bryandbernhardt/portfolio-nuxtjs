@@ -1,6 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  routeRules: {
+    '/': { prerender: true }, //SSG for static pages
+    '/pt': { prerender: true }, //SSG for static pages
+    '/es': { prerender: true }, //SSG for static pages
+    '/history': { prerender: true }, //SSG for static pages
+    '/pt/history': { prerender: true }, //SSG for static pages
+    '/es/history': { prerender: true }, //SSG for static pages
+    '/settings': { prerender: true }, //SSG for static pages
+    '/pt/settings': { prerender: true }, //SSG for static pages
+    '/es/settings': { prerender: true }, //SSG for static pages
+  },
   css: ['~/assets/styles/reset.scss', '~/assets/styles/theme.scss'],
   modules: [
     '@nuxt/ui',
