@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+const colorMode = useColorMode();
+
+const isDarkTheme = ref(true);
+
+watch(colorMode, async() => isDarkTheme.value = colorMode.value === 'dark')
 </script>
 
 <template>
@@ -9,7 +13,7 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
         :to="localePath('settings')"
         :aria-label="$t('settings.title')"
     >
-      <font-awesome-icon :icon="['fas', 'gear']" class="icon" />
+      <Icon name="ic:round-settings" size="2rem" class="settings-icon" :class="{ invert: !isDarkTheme }" />
     </nuxt-link>
   </span>
 </template>
@@ -22,9 +26,12 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
     width: 100%;
     height: 100%;
 
-    .icon {
-      height: 3.5rem;
-      padding: 1rem;
+    .settings-icon {
+      margin: 0.5rem;
+    }
+
+    .invert {
+      filter: invert(100%);
     }
   }
 }

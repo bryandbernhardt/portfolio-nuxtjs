@@ -19,7 +19,6 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/fontaine',
     '@nuxtjs/critters',
-    '@nuxt/image',
     'nuxt-icon',
     'nuxt-delay-hydration',
     '@nuxtjs/device',
@@ -104,12 +103,5 @@ export default defineNuxtConfig({
         }
       }
     }
-  },
-  build: {
-    transpile: [
-      '@fortawesome/vue-fontawesome',
-      '@fortawesome/fontawesome-svg-core',
-      '@fortawesome/free-solid-svg-icons'
-    ]
   }
 })
