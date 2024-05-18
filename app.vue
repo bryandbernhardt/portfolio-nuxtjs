@@ -7,16 +7,6 @@ const head = useLocaleHead({
 })
 const title = computed(() => t('header.title'))
 
-useHead({
-  link: [
-    {
-      rel: 'preload',
-      as: 'image',
-      href: 'https://avatars.githubusercontent.com/u/77077402?v=4'
-    },
-  ],
-})
-
 useSeoMeta({
   title: 'Bryan Dietrich Bernhardt Developer',
   ogTitle: 'Bryan Dietrich Bernhardt Developer',
@@ -38,9 +28,11 @@ useSeoMeta({
         <Meta :id="meta.id" :property="meta.property" :content="meta.content" />
       </template>
     </Head>
-    <Body :class="{ 'mobile': !$device.isDesktop }">
+    <Body>
       <NuxtLayout>
-        <NuxtPage />
+        <v-app>
+          <NuxtPage />
+        </v-app>
       </NuxtLayout>
     </Body>
   </Html>

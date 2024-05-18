@@ -1,3 +1,5 @@
+import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
@@ -13,9 +15,14 @@ export default defineNuxtConfig({
     '/pt/settings': { prerender: true }, //SSG for static pages
     '/es/settings': { prerender: true }, //SSG for static pages
   },
-  css: ['~/assets/styles/reset.scss', '~/assets/styles/theme.scss'],
+  css: ['~/assets/styles/reset.scss'],
   modules: [
-    '@nuxt/ui',
+    (_options, nuxt) => {
+      nuxt.hooks.hook('vite:extendConfig', (config) => {
+        // @ts-expect-error
+        config.plugins.push(vuetify({ autoImport: true }))
+      })
+    },
     '@nuxtjs/color-mode',
     '@nuxtjs/fontaine',
     '@nuxtjs/critters',
@@ -74,9 +81,6 @@ export default defineNuxtConfig({
       }
     ]
   ],
-  ui: {
-    global: true,
-  },
   nitro: {
     prerender: {
       crawlLinks: true,
@@ -96,12 +100,10 @@ export default defineNuxtConfig({
     }
   },
   vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@import "~/assets/styles/variables.scss";'
-        }
-      }
-    }
+    vue: {
+      template: {
+        transformAssetUrls,
+      },
+    },
   }
 })

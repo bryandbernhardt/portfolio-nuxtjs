@@ -1,104 +1,51 @@
-<script setup lang="ts">
+<script setup lang="js">
 const { $i18n } = useNuxtApp();
 const localePath = useLocalePath();
-const { locale, locales } = useI18n();
-const switchLocalePath = useSwitchLocalePath()
-
-const isOpen = ref(false)
-const search = ref('')
-
-// computed
-
-const availableLocales = computed(() => {
-  return (locales.value).filter(
-    i => i.code !== locale.value
-      && i.name
-        .toLowerCase()
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, "")
-        .includes(
-          search.value
-            .toLowerCase()
-            .normalize('NFD')
-            .replace(/[\u0300-\u036f]/g, "")
-            .trim()
-        )
-  )
-})
-
-const activeLocale = computed(() => {
-  return (locales.value).find(i => i.code === locale.value)
-})
 
 const links = computed(() => [
   {
-    label: '',
-    icon: 'i-heroicons-home-solid',
-    to: localePath('index')
+    title: $i18n.t('home.overview.title'),
+    icon: 'ic:baseline-home',
+    href: '/'
   },
   {
-    label: $i18n.t('settings.title'),
-    icon: 'i-heroicons-cog-6-tooth-solid'
+    title: $i18n.t('settings.title'),
+    disabled: true,
   }
 ]);
 </script>
 
 <template>
-  <div class="settings-page">
-    <UBreadcrumb :links="links" class="breadcrumb" />
-    <h1>{{ $t('settings.title') }}</h1>
+  <v-container>
+    <v-breadcrumbs :items="links" divider=">" class="d-flex my-2 px-0 py-5 text-caption">
+      <template v-slot:item="{ item }">
+        <v-breadcrumbs-item
+          :disabled="item.disabled"
+          :to="localePath(item.href)"
+        >
+          <span class="d-flex align-center">
+            <Icon v-if="item?.icon" :name="item.icon" size="1.5rem" />
+            <span>{{ item.title }}</span>
+          </span>
+        </v-breadcrumbs-item>
+      </template>
+      <template v-slot:divider>
+        <v-breadcrumbs-divider  class="pa-0"/>
+      </template>
+    </v-breadcrumbs>
+    <h1 class="text-h4 text-md-h3 mb-4">{{ $t('settings.title') }}</h1>
 
-    <div class="setting-content">
-      <h2>{{ $t('settings.subtitles.theme') }}</h2>
-      <ThemeChanger />
-    </div>
+    <h2 class="text-h8 text-md-h6">{{ $t('settings.subtitles.theme') }}</h2>
+    <ThemeChanger />
 
-    <div class="setting-content">
-      <h2>{{ $t('settings.subtitles.languages') }}</h2>
-      <UButton :label="activeLocale.name + ', ' + $t('settings.change_language')" @click="isOpen = true" color="white" />
-      <USlideover v-model="isOpen">
-        <UCard class="flex flex-col flex-1" :ui="{ body: { base: 'flex-1' }, ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
-          <template #header>
-            <div class="flex items-center justify-between">
-              <h3 class="text-base font-semibold leading-6 text-gray-900 dark:text-white">
-                {{ $t('settings.subtitles.languages') }}
-              </h3>
-              <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="isOpen = false" />
-            </div>
-          </template>
-          <div style="margin-bottom: 0.2rem"><UInput color="white" variant="outline" placeholder="Search..." v-model="search" /></div>
-          <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)" :aria-label="locale.name">
-            <div class="p-1">{{ locale.name }}</div>
-            <UDivider />
-          </NuxtLink>
-        </UCard>
-      </USlideover>
-    </div>
+    <h2 class="text-h8 text-md-h6">{{ $t('settings.subtitles.languages') }}</h2>
+    <LanguageChanger />
 
-  </div>
-</template>
+  </v-container>
+</template>>
 
-<style scoped lang="scss">
-body {
-  .settings-page {
-    margin: 0 auto;
-    max-width: 75rem;
-
-    .breadcrumb {
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 1rem;
-      max-width: calc(100vw - 8.5rem);
-    }
-
-    .setting-content {
-      margin-bottom: 1rem;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-    }
-  }
+<style lang="scss" scoped>
+.v-breadcrumbs {
+  line-height: initial;
 }
 </style>

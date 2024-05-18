@@ -1,32 +1,35 @@
 <script setup>
-const { locale, locales } = useI18n()
+const { locale, locales } = useI18n();
+
 const switchLocalePath = useSwitchLocalePath()
 
-const availableLocales = computed(() => {
-  return (locales.value).filter(i => i.code !== locale.value)
+const value = ref('');
+
+const formattedLocales = locales.value.map(l => {
+  return {
+    title: l.name,
+    value: l.code
+  }
 })
 
-const localesFlags = {
-  en: 'emojione:flag-for-united-states',
-  es: 'emojione:flag-for-argentina',
-  pt: 'emojione:flag-for-brazil',
-}
+watch(value, async (newValue, oldValue) => {
+  if (newValue !== oldValue)
+    navigateTo(switchLocalePath(newValue))
+})
+
+onMounted(() => {
+  value.value = locale.value
+})
 </script>
 
 <template>
-  <div class="language-changer">
-    <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)" :aria-label="locale.name">
-      <UTooltip :text="locale.name" :popper="{ arrow: true }">
-        <Icon size="2em" :name="localesFlags[locale.code]" />
-      </UTooltip>
-    </NuxtLink>
+  <div class="w-100">
+    <v-autocomplete
+      :label="$t('settings.subtitles.languages')"
+      :items="formattedLocales"
+      v-model="value"
+      transition="fade-transition"
+      clearable
+    />
   </div>
-
 </template>
-
-<style lang="scss">
-.language-changer {
-  display: flex;
-  gap: 0.2rem;
-}
-</style>

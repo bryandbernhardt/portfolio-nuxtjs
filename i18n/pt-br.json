@@ -37,7 +37,6 @@
   },
   "settings": {
     "title": "Configurações",
-    "change_language": "clique para trocar...",
     "subtitles": {
       "theme": "Tema",
       "languages": "Idiomas"
